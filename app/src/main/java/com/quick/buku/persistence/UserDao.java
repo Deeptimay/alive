@@ -1,5 +1,6 @@
 package com.quick.buku.persistence;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -9,6 +10,7 @@ import com.quick.buku.models.Datum;
 
 import java.util.List;
 
+@Dao
 public interface UserDao {
 
     @Query("SELECT * FROM users")

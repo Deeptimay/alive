@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    private static final String API_URL = "http://www.google.com";
+    private static final String API_URL = "https://reqres.in";
     private static final Object sLock = new Object();
     private static final OkHttpClient client;
     static int cacheSize = 10 * 1024 * 1024; // 10 MB

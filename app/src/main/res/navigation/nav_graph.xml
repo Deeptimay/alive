@@ -9,18 +9,18 @@
         android:name="com.quick.buku.ui.HomeFragment"
         android:label="HomeFragment">
         <action
-            android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_homeFragment_to_profileAddFragment"
+            app:destination="@id/profileAddFragment" />
         <action
             android:id="@+id/action_homeFragment_to_profileDetailFragment"
             app:destination="@id/profileDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.quick.buku.ui.ProfileFragment"
-        android:label="ProfileFragment">
+        android:id="@+id/profileAddFragment"
+        android:name="com.quick.buku.ui.ProfileAddFragment"
+        android:label="ProfileAddFragment">
         <action
-            android:id="@+id/action_profileFragment_to_profileDetailFragment"
+            android:id="@+id/action_profileAddFragment_to_profileDetailFragment"
             app:destination="@id/profileDetailFragment" />
     </fragment>
     <fragment

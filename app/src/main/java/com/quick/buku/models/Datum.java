@@ -1,5 +1,8 @@
 package com.quick.buku.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -7,8 +10,19 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Entity(tableName = "users")
-public class Datum {
+public class Datum implements Parcelable {
 
+    public static final Creator<Datum> CREATOR = new Creator<Datum>() {
+        @Override
+        public Datum createFromParcel(Parcel in) {
+            return new Datum(in);
+        }
+
+        @Override
+        public Datum[] newArray(int size) {
+            return new Datum[size];
+        }
+    };
     @PrimaryKey
     @SerializedName("id")
     @Expose
@@ -25,6 +39,21 @@ public class Datum {
     @SerializedName("avatar")
     @Expose
     private String avatar;
+
+    public Datum() {
+    }
+
+    public Datum(Parcel in) {
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readInt();
+        }
+        email = in.readString();
+        firstName = in.readString();
+        lastName = in.readString();
+        avatar = in.readString();
+    }
 
     public Integer getId() {
         return id;
@@ -64,5 +93,19 @@ public class Datum {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(email);
+        parcel.writeString(firstName);
+        parcel.writeString(lastName);
+        parcel.writeString(avatar);
     }
 }
