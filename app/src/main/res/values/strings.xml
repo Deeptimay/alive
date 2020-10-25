@@ -21,4 +21,8 @@
     <string name="first_name">First Name</string>
     <string name="email">Email</string>
     <string name="create_user">Create User</string>
+
+    <string name="user_name">%1$s %2$s</string>
+    <string name="user_id">User Id</string>
+    <string name="user_id_int">%d</string>
 </resources>

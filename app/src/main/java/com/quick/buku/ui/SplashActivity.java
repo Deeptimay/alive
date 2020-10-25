@@ -31,7 +31,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
             public void run() {
                 logo.performClick();
             }
-        }, 4000);
+        }, 2500);
     }
 
     @Override
