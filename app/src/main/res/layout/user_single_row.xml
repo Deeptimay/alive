@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/card_view"
     android:layout_margin="6dp"
     card_view:cardElevation="4dp">
 
@@ -17,7 +17,6 @@
             android:layout_width="@dimen/dimen_thumbnail"
             android:layout_height="@dimen/dimen_thumbnail"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
             android:scaleType="fitXY"
             android:src="@drawable/ic_launcher_foreground" />
 
@@ -46,6 +45,5 @@
             android:paddingBottom="@dimen/songs_count_padding_bottom"
             android:text="deeptimay@gmail.com"
             android:textSize="@dimen/album_title" />
-
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

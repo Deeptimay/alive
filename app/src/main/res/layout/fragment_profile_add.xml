@@ -33,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email" />
+                android:text="@string/email" />
 
             <EditText
                 android:id="@+id/et_email_id"
@@ -61,7 +61,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="First Name" />
+                android:text="@string/first_name" />
 
             <EditText
                 android:id="@+id/et_first_name"
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Second Name" />
+                android:text="@string/last_name" />
 
             <EditText
                 android:id="@+id/et_second_name"
@@ -114,6 +114,6 @@
             android:background="@drawable/gradientbackground"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Create User" />
+            android:text="@string/create_user" />
     </LinearLayout>
 </ScrollView>
