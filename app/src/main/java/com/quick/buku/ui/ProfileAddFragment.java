@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -53,22 +54,26 @@ public class ProfileAddFragment extends Fragment {
     }
 
     public void createUserRoom() {
-        if (!datum.getEmail().matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")) {
-            binding.etEmailId.setError("Invalid Email Address");
-            return;
-        }
+        try {
+            if (!datum.getEmail().matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")) {
+                binding.etEmailId.setError("Invalid Email Address");
+                return;
+            }
 
-        if (!datum.getEmail().isEmpty() && !datum.getFirstName().isEmpty() && !datum.getLastName().isEmpty()) {
-            datum.setId(++count);
+            if (!datum.getEmail().isEmpty() && !datum.getFirstName().isEmpty() && !datum.getLastName().isEmpty()) {
+                datum.setId(++count);
 
-            new Thread(() -> {
-                UserDao userDao = UserDatabase.getInstance(MyApplication.getInstance()).getUserDao();
-                userDao.insert(datum);
-            }).start();
+                new Thread(() -> {
+                    UserDao userDao = UserDatabase.getInstance(MyApplication.getInstance()).getUserDao();
+                    userDao.insert(datum);
+                }).start();
 
-            Bundle bundle = new Bundle();
-            bundle.putParcelable("Datum", datum);
-            navController.navigate(R.id.action_profileAddFragment_to_profileDetailFragment, bundle);
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("Datum", datum);
+                navController.navigate(R.id.action_profileAddFragment_to_profileDetailFragment, bundle);
+            }
+        } catch (Exception e) {
+            Toast.makeText(ProfileAddFragment.this.getActivity(), "Please Fill All Details", Toast.LENGTH_SHORT).show();
         }
     }
 
