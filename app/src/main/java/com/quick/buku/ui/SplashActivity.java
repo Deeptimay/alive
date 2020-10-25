@@ -15,6 +15,8 @@ import com.quick.buku.R;
 
 public class SplashActivity extends Activity implements View.OnClickListener {
 
+    Handler handler;
+    Runnable runnable;
     private ImageView logo;
 
     @Override
@@ -26,12 +28,13 @@ public class SplashActivity extends Activity implements View.OnClickListener {
         logo = (ImageView) findViewById(R.id.mrjitters);
         logo.setOnClickListener(this);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
+        handler = new Handler();
+        runnable = new Runnable() {
             public void run() {
                 logo.performClick();
             }
-        }, 2500);
+        };
+        handler.postDelayed(runnable, 2000);
     }
 
     @Override
@@ -48,6 +51,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+        handler.removeCallbacks(runnable);
         // Defines a new alpha/scale animation
         Animation click = AnimationUtils.loadAnimation(this, R.anim.click);
 
@@ -64,8 +68,11 @@ public class SplashActivity extends Activity implements View.OnClickListener {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
             }
         });
 
