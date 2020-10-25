@@ -1,5 +1,6 @@
 package com.quick.buku.adapters;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.quick.buku.R;
 import com.quick.buku.callBacks.OnItemClickedListener;
 import com.quick.buku.models.Datum;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -38,7 +41,8 @@ public class ProfileRvAdapter extends RecyclerView.Adapter<ProfileRvAdapter.MyVi
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NotNull MyViewHolder holder, int position) {
+
         Datum userData = userList.get(position);
 
         String name = "N/A";
@@ -65,10 +69,13 @@ public class ProfileRvAdapter extends RecyclerView.Adapter<ProfileRvAdapter.MyVi
         holder.card_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("Datum", userData);
+                mCallback.clickedItem(bundle);
             }
         });
     }
+
 
     @Override
     public int getItemCount() {
@@ -84,24 +91,22 @@ public class ProfileRvAdapter extends RecyclerView.Adapter<ProfileRvAdapter.MyVi
     }
 
     public void swapData(List<Datum> items) {
-        if (items != null) {
+        if (items != null && userList != null) {
             userList.addAll(items);
             notifyDataSetChanged();
-
         } else {
-            userList = null;
+            userList.clear();
         }
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView tv_email, tv_id, tv_name;
+        public TextView tv_email, tv_name;
         ImageView thumbnail;
         CardView card_view;
 
         public MyViewHolder(View view) {
             super(view);
-            tv_email = view.findViewById(R.id.tv_email);
-            tv_id = view.findViewById(R.id.tv_id);
+            tv_email = view.findViewById(R.id.tv_email_id);
             tv_name = view.findViewById(R.id.tv_name);
             thumbnail = view.findViewById(R.id.thumbnail);
             card_view = view.findViewById(R.id.card_view);

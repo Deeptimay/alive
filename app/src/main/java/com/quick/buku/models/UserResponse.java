@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class ApiResponse {
+public class UserResponse {
 
     @SerializedName("page")
     @Expose

@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,14 +20,19 @@ import com.quick.buku.R;
 import com.quick.buku.adapters.ProfileRvAdapter;
 import com.quick.buku.callBacks.OnItemClickedListener;
 import com.quick.buku.models.Datum;
+import com.quick.buku.utils.Resource;
+import com.quick.buku.viewmodels.UserViewModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment implements OnItemClickedListener {
 
     RecyclerView rv_user_list;
     ProfileRvAdapter profileRvAdapter;
-    private List<Datum> userList;
+    UserViewModel userViewModel;
+    NavController navController;
+    private List<Datum> userList = new ArrayList<>();
 
     @Nullable
     @Override
@@ -40,16 +49,33 @@ public class HomeFragment extends Fragment implements OnItemClickedListener {
     private void initView(View view) {
         rv_user_list = view.findViewById(R.id.rv_user_list);
 
+        userViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
+        initRecyclerView();
+        subscribeObservers();
+    }
+
+
+    private void subscribeObservers() {
+        userViewModel.getUsers().observe(this.getViewLifecycleOwner(), new Observer<Resource<List<Datum>>>() {
+            @Override
+            public void onChanged(Resource<List<Datum>> listResource) {
+                profileRvAdapter.resetData();
+                profileRvAdapter.swapData(listResource.data);
+            }
+        });
+    }
+
+    private void initRecyclerView() {
         profileRvAdapter = new ProfileRvAdapter(userList, this);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(HomeFragment.this.getContext());
         rv_user_list.setLayoutManager(mLayoutManager);
         rv_user_list.setItemAnimator(new DefaultItemAnimator());
         rv_user_list.setAdapter(profileRvAdapter);
-
     }
 
     @Override
     public void clickedItem(Bundle data) {
-
+        navController = Navigation.findNavController(HomeFragment.this.getActivity(), R.id.nav_host_fragment);
+        navController.navigate(R.id.action_homeFragment_to_profileDetailFragment, data);
     }
 }

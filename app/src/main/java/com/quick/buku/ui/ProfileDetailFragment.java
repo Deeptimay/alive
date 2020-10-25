@@ -45,6 +45,7 @@ public class ProfileDetailFragment extends Fragment {
 
         tv_name.setText(String.format("%s %s", userData.getFirstName(), userData.getLastName()));
         tv_email.setText(userData.getEmail());
+        tv_id.setText(String.valueOf(userData.getId()));
 
         String name = "";
         try {

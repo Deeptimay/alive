@@ -23,7 +23,7 @@ public class Datum implements Parcelable {
             return new Datum[size];
         }
     };
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @SerializedName("id")
     @Expose
     private Integer id;
