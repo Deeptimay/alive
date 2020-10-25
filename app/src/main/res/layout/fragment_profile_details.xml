@@ -20,7 +20,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="45dp"
-                android:src="@mipmap/passport" />
+                android:src="@drawable/buku_logo" />
 
             <TextView
                 android:id="@+id/tv_name"

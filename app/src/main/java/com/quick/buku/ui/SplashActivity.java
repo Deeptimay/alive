@@ -8,14 +8,14 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.quick.buku.R;
 
 
 public class SplashActivity extends Activity implements View.OnClickListener {
 
-    private TextView logo;
+    private ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class SplashActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_splash);
 
         // Attaches a listener for animation/transition to the Mr. Jitters logo
-        logo = (TextView) findViewById(R.id.mrjitters);
+        logo = (ImageView) findViewById(R.id.mrjitters);
         logo.setOnClickListener(this);
 
         new Handler().postDelayed(new Runnable() {

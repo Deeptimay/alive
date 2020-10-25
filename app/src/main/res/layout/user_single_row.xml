@@ -18,7 +18,7 @@
             android:layout_height="@dimen/dimen_thumbnail"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_foreground" />
+            android:src="@drawable/buku_logo" />
 
         <TextView
             android:id="@+id/tv_name"
