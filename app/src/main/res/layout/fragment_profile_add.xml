@@ -5,11 +5,11 @@
 
         <variable
             name="createUser"
-            type="com.quick.buku.models.Datum" />
+            type="com.test.aliveCore.models.Datum" />
 
         <variable
             name="handler"
-            type="com.quick.buku.callBacks.OnItemClickedListenerDatum" />
+            type="com.test.aliveCore.callBacks.OnItemClickedListenerDatum" />
     </data>
 
     <ScrollView
@@ -31,7 +31,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/buku_logo" />
+                    android:src="@drawable/alive_core_logo" />
             </RelativeLayout>
 
             <LinearLayout
@@ -119,6 +119,35 @@
                     android:paddingEnd="10dp"
                     android:text="@={createUser.lastName}"
                     android:windowSoftInputMode="adjustPan" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_date_picker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOB" />
+
+                <TextView
+                    android:id="@+id/tv_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Set DOB"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@={createUser.dob}"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton

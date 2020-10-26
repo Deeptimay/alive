@@ -1,4 +1,4 @@
-package com.quick.buku.viewmodels;
+package com.test.aliveCore.viewmodels;
 
 
 import android.app.Application;
@@ -7,9 +7,9 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.quick.buku.models.Datum;
-import com.quick.buku.repositories.UserRepository;
-import com.quick.buku.utils.Resource;
+import com.test.aliveCore.models.Datum;
+import com.test.aliveCore.repositories.UserRepository;
+import com.test.aliveCore.utils.Resource;
 
 import java.util.List;
 

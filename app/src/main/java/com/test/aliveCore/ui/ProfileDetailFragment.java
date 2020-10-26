@@ -1,4 +1,4 @@
-package com.quick.buku.ui;
+package com.test.aliveCore.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,9 +10,9 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
-import com.quick.buku.R;
-import com.quick.buku.databinding.FragmentProfileDetailsBinding;
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.R;
+import com.test.aliveCore.databinding.FragmentProfileDetailsBinding;
+import com.test.aliveCore.models.Datum;
 
 public class ProfileDetailFragment extends Fragment {
 

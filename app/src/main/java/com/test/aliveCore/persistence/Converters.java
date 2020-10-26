@@ -1,4 +1,4 @@
-package com.quick.buku.persistence;
+package com.test.aliveCore.persistence;
 
 
 import androidx.room.TypeConverter;

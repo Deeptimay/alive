@@ -1,4 +1,4 @@
-package com.quick.buku.adapters;
+package com.test.aliveCore.adapters;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.quick.buku.callBacks.OnItemClickedListener;
-import com.quick.buku.databinding.UserSingleRowBinding;
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.callBacks.OnItemClickedListener;
+import com.test.aliveCore.databinding.UserSingleRowBinding;
+import com.test.aliveCore.models.Datum;
 
 public class UserViewHolder extends RecyclerView.ViewHolder {
 

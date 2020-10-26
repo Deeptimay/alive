@@ -1,12 +1,12 @@
-package com.quick.buku.adapters;
+package com.test.aliveCore.adapters;
 
 import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amulyakhare.textdrawable.util.ColorGenerator;
-import com.quick.buku.callBacks.OnItemClickedListener;
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.callBacks.OnItemClickedListener;
+import com.test.aliveCore.models.Datum;
 
 import org.jetbrains.annotations.NotNull;
 

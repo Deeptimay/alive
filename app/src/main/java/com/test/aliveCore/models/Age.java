@@ -1,4 +1,4 @@
-package com.vision.imagine.pojos;
+package com.test.aliveCore.models;
 
 public class Age {
     private int mins;

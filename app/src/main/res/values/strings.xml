@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BuKu</string>
+    <string name="app_name">AliveCoreTest</string>
 
     <!-- Network Errors-->
     <string name="networkError">Oh! You are not connected to a wifi or cellular data network. Please connect and try again</string>
@@ -22,7 +22,9 @@
     <string name="email">Email</string>
     <string name="create_user">Create User</string>
 
+    <string name="user_age">Age %1$s</string>
     <string name="user_name">%1$s %2$s</string>
     <string name="user_id">User Id</string>
     <string name="user_id_int">%d</string>
+    <string name="user_age_">User Age</string>
 </resources>

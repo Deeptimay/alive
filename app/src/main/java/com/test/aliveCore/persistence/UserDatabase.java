@@ -1,4 +1,4 @@
-package com.quick.buku.persistence;
+package com.test.aliveCore.persistence;
 
 
 import android.content.Context;
@@ -8,7 +8,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.models.Datum;
 
 @Database(entities = {Datum.class}, version = 1)
 @TypeConverters({Converters.class})

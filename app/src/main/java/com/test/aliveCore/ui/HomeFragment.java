@@ -1,4 +1,4 @@
-package com.quick.buku.ui;
+package com.test.aliveCore.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,12 +16,12 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.quick.buku.R;
-import com.quick.buku.adapters.ProfileRvAdapter;
-import com.quick.buku.callBacks.OnItemClickedListener;
-import com.quick.buku.models.Datum;
-import com.quick.buku.utils.Resource;
-import com.quick.buku.viewmodels.UserViewModel;
+import com.test.aliveCore.R;
+import com.test.aliveCore.adapters.ProfileRvAdapter;
+import com.test.aliveCore.callBacks.OnItemClickedListener;
+import com.test.aliveCore.models.Datum;
+import com.test.aliveCore.utils.Resource;
+import com.test.aliveCore.viewmodels.UserViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

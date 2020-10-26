@@ -1,4 +1,4 @@
-package com.quick.buku.utils;
+package com.test.aliveCore.utils;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
@@ -10,9 +10,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
 
 import com.google.gson.stream.MalformedJsonException;
-import com.quick.buku.MyApplication;
-import com.quick.buku.R;
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.MyApplication;
+import com.test.aliveCore.R;
+import com.test.aliveCore.models.Datum;
 
 import java.io.IOException;
 import java.net.SocketTimeoutException;

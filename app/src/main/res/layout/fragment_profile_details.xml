@@ -6,7 +6,7 @@
 
         <variable
             name="user"
-            type="com.quick.buku.models.Datum" />
+            type="com.test.aliveCore.models.Datum" />
     </data>
 
     <FrameLayout
@@ -30,7 +30,7 @@
                     android:layout_height="150dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="45dp"
-                    android:src="@drawable/buku_logo"
+                    android:src="@drawable/alive_core_logo"
                     android:transitionName="poster"
                     app:setImage="@{user}" />
 
@@ -66,7 +66,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="@string/user_id"
+                        android:text="@string/user_age_"
                         android:textSize="20sp" />
 
                     <TextView
@@ -74,7 +74,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="@{@string/user_id_int(user.id)}"
+                        android:text="@{user.dob}"
                         android:textColor="#8BC34A"
                         android:textSize="20sp"
                         android:textStyle="bold" />

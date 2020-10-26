@@ -1,4 +1,4 @@
-package com.quick.buku.repositories;
+package com.test.aliveCore.repositories;
 
 
 import android.content.Context;
@@ -6,13 +6,13 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.LiveData;
 
-import com.quick.buku.models.Datum;
-import com.quick.buku.models.UserResponse;
-import com.quick.buku.persistence.UserDao;
-import com.quick.buku.persistence.UserDatabase;
-import com.quick.buku.services.RetrofitClient;
-import com.quick.buku.utils.NetworkBoundResource;
-import com.quick.buku.utils.Resource;
+import com.test.aliveCore.models.Datum;
+import com.test.aliveCore.models.UserResponse;
+import com.test.aliveCore.persistence.UserDao;
+import com.test.aliveCore.persistence.UserDatabase;
+import com.test.aliveCore.services.RetrofitClient;
+import com.test.aliveCore.utils.NetworkBoundResource;
+import com.test.aliveCore.utils.Resource;
 
 import java.util.List;
 

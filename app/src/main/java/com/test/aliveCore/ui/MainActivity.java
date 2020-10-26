@@ -1,4 +1,4 @@
-package com.quick.buku.ui;
+package com.test.aliveCore.ui;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +14,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.quick.buku.R;
+import com.test.aliveCore.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if (destination.getId() == R.id.homeFragment) {
                     bottomNavigationView.setVisibility(View.VISIBLE);
-                    getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-                    getSupportActionBar().setTitle("Home");
+                    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                    getSupportActionBar().setTitle("User List");
                 } else if (destination.getId() == R.id.profileAddFragment) {
                     bottomNavigationView.setVisibility(View.VISIBLE);
-                    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                    getSupportActionBar().setDisplayHomeAsUpEnabled(false);
                     getSupportActionBar().setTitle("Add User");
                 } else if (destination.getId() == R.id.profileDetailFragment) {
                     bottomNavigationView.setVisibility(View.GONE);

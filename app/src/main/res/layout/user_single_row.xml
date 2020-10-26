@@ -7,7 +7,7 @@
 
         <variable
             name="user"
-            type="com.quick.buku.models.Datum" />
+            type="com.test.aliveCore.models.Datum" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -28,7 +28,7 @@
                 android:layout_height="@dimen/dimen_thumbnail"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:scaleType="fitXY"
-                android:src="@drawable/buku_logo"
+                android:src="@drawable/alive_core_logo"
                 android:transitionName="poster"
                 app:setImage="@{user}" />
 
@@ -39,6 +39,7 @@
                 android:layout_alignTop="@id/thumbnail"
                 android:layout_toEndOf="@+id/thumbnail"
                 android:paddingLeft="@dimen/album_title_padding"
+                android:paddingTop="@dimen/songs_count_padding_bottom"
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingBottom="@dimen/songs_count_padding_bottom"
                 android:text="@{@string/user_name(user.firstName,user.lastName)}"
@@ -56,6 +57,19 @@
                 android:paddingRight="@dimen/album_title_padding"
                 android:paddingBottom="@dimen/songs_count_padding_bottom"
                 android:text="@{user.email}"
+                android:textSize="@dimen/album_title" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_email_id"
+                android:layout_marginTop="6dp"
+                android:layout_toEndOf="@+id/thumbnail"
+                android:paddingLeft="@dimen/album_title_padding"
+                android:paddingRight="@dimen/album_title_padding"
+                android:paddingBottom="@dimen/songs_count_padding_bottom"
+                android:text="@{@string/user_age(user.dob)}"
                 android:textSize="@dimen/album_title" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

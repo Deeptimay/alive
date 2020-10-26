@@ -1,4 +1,4 @@
-package com.quick.buku.models;
+package com.test.aliveCore.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

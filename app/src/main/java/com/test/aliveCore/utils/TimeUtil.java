@@ -1,50 +1,11 @@
-package com.vision.imagine.utils;
+package com.test.aliveCore.utils;
 
-import com.github.thunder413.datetimeutils.DateTimeUnits;
-import com.github.thunder413.datetimeutils.DateTimeUtils;
-import com.vision.imagine.pojos.Age;
+import com.test.aliveCore.models.Age;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 public class TimeUtil {
-
-    public static String calculateAge2(String dateTime) {
-
-        try {
-            //"2020-09-20 09:04:52"
-            Date createdTime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(dateTime);
-
-            Date currentTime = new Date();
-
-//          int diff = DateTimeUtils.getDateDiff(date,date2, DateTimeUnits.MILLISECONDS);
-//          int diff = DateTimeUtils.getDateDiff(date,date2, DateTimeUnits.SECONDS);
-            int diffInMinutes = DateTimeUtils.getDateDiff(currentTime, createdTime, DateTimeUnits.MINUTES);
-            int diffInHours = DateTimeUtils.getDateDiff(currentTime, createdTime, DateTimeUnits.HOURS);
-            int diffInDays = DateTimeUtils.getDateDiff(currentTime, createdTime, DateTimeUnits.DAYS);
-
-            Age age = new Age(diffInMinutes, diffInHours, diffInDays, diffInDays / 30, diffInDays / 365);
-
-            String ago = "";
-            if (age.getYears() != 0) {
-                ago = age.getYears() + " years ago";
-            } else if (age.getMonths() != 0) {
-                ago = age.getMonths() + " months ago";
-            } else if (age.getDays() != 0) {
-                ago = age.getDays() + " days ago";
-            } else if (age.getHour() != 0) {
-                ago = age.getHour() + " hours ago";
-            } else if (age.getMins() != 0) {
-                ago = age.getMins() + " mins ago";
-            }
-            return ago;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
 
     public static Age calculateAge(Date birthDate) {
         int years = 0;
@@ -98,17 +59,6 @@ public class TimeUtil {
         Date currentDate = new Date();
         long diff = currentDate.getTime() - birthDate.getTime();
 
-//        long diffSeconds = diff / 1000 % 60;
-        int diffMinutes = (int) (diff / (60 * 1000) % 60);
-        int diffHours = (int) (diff / (60 * 60 * 1000) % 24);
-//        long diffDays = diff / (24 * 60 * 60 * 1000);
-
-//            public Age(int mins, int hour, int days, int months, int years) {
-
-        //Create new Age object
-        return new Age(diffMinutes, diffHours, days, months, years);
-//        return new Age(days, months, years);
+        return new Age(days, months, years);
     }
-
-
 }

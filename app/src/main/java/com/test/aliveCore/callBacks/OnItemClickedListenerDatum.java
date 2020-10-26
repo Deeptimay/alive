@@ -1,4 +1,4 @@
-package com.quick.buku.callBacks;
+package com.test.aliveCore.callBacks;
 
 public interface OnItemClickedListenerDatum {
     public void clickedItem();

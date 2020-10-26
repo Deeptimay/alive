@@ -16,5 +16,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:gravity="center"
-        app:srcCompat="@drawable/buku_logo" />
+        app:srcCompat="@drawable/alive_core_logo" />
 </RelativeLayout>

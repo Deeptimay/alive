@@ -1,4 +1,4 @@
-package com.quick.buku;
+package com.test.aliveCore;
 
 import org.junit.Test;
 

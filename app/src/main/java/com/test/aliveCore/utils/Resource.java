@@ -1,4 +1,4 @@
-package com.quick.buku.utils;
+package com.test.aliveCore.utils;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

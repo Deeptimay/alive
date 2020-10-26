@@ -1,4 +1,4 @@
-package com.quick.buku.adapters;
+package com.test.aliveCore.adapters;
 
 import android.widget.ImageView;
 
@@ -8,7 +8,7 @@ import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.models.Datum;
 
 public class BindingAdapters {
 

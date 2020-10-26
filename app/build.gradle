@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.quick.buku"
+        applicationId "com.test.aliveCore"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
@@ -74,4 +74,5 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+//    implementation 'com.github.psinetron:slycalendarview:0.0.9'
 }

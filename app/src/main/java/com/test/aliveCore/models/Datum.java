@@ -1,4 +1,4 @@
-package com.quick.buku.models;
+package com.test.aliveCore.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -39,6 +39,9 @@ public class Datum implements Parcelable {
     @SerializedName("avatar")
     @Expose
     private String avatar;
+    @SerializedName("dob")
+    @Expose
+    private String dob;
 
     public Datum() {
     }
@@ -53,6 +56,19 @@ public class Datum implements Parcelable {
         firstName = in.readString();
         lastName = in.readString();
         avatar = in.readString();
+        dob = in.readString();
+    }
+
+    public static Creator<Datum> getCREATOR() {
+        return CREATOR;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
     public Integer getId() {
@@ -107,5 +123,6 @@ public class Datum implements Parcelable {
         parcel.writeString(firstName);
         parcel.writeString(lastName);
         parcel.writeString(avatar);
+        parcel.writeString(dob);
     }
 }

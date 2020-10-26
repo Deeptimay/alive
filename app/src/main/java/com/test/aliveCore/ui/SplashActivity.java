@@ -1,4 +1,4 @@
-package com.quick.buku.ui;
+package com.test.aliveCore.ui;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
-import com.quick.buku.R;
+import com.test.aliveCore.R;
 
 
 public class SplashActivity extends Activity implements View.OnClickListener {

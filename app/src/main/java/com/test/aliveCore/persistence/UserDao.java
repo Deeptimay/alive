@@ -1,4 +1,4 @@
-package com.quick.buku.persistence;
+package com.test.aliveCore.persistence;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.quick.buku.models.Datum;
+import com.test.aliveCore.models.Datum;
 
 import java.util.List;
 

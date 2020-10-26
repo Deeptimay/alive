@@ -1,6 +1,6 @@
-package com.quick.buku.services;
+package com.test.aliveCore.services;
 
-import com.quick.buku.models.UserResponse;
+import com.test.aliveCore.models.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
