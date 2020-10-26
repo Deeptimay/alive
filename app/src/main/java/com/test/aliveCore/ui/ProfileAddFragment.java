@@ -130,7 +130,7 @@ public class ProfileAddFragment extends Fragment {
                             Date date = new SimpleDateFormat("dd/MM/yyyy").parse(sDate);
                             age = TimeUtil.calculateAge(date);
                             binding.tvDob.setText(sDate);
-                            datum.setDob(String.valueOf(age.getYears()) + " Yrs " + String.valueOf(age.getYears()) + " Months " + String.valueOf(age.getYears()) + " Days");
+                            datum.setDob(String.valueOf(age.getYears()) + " Yrs " + String.valueOf(age.getMonths()) + " Months " + String.valueOf(age.getDays()) + " Days");
                         } catch (ParseException e) {
                             e.printStackTrace();
                         }
