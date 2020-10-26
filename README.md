@@ -1,4 +1,4 @@
-# Buku
+# AliveCor Test
 
 Jetpack Navigation 
 Databinding LiveData
@@ -7,9 +7,9 @@ Retrofit
 AndroidX
 Google Analytics
 
-Test Apk Link: https://drive.google.com/file/d/1CFNKaNKthOLO3x0_TXtf2dy_R-6CjmYN/view?usp=sharing
+Test Apk Link: https://drive.google.com/file/d/12yRO8wt5iwBbNGoqKYdxDJhaLM1ws8M4/view?usp=sharing
 
 Screenshots
-![alt text](https://github.com/Deeptimay/Buku/blob/master/app/src/main/res/mipmap-xxxhdpi/screenshot_1603658975.png)
-![alt text](https://github.com/Deeptimay/Buku/blob/master/app/src/main/res/mipmap-xxxhdpi/screenshot_1603658978.png)
-![alt text](https://github.com/Deeptimay/Buku/blob/master/app/src/main/res/mipmap-xxxhdpi/screenshot_1603670428.png)
+![alt text](https://github.com/Deeptimay/alive/blob/main/app/src/main/res/mipmap/screenshot_20201026_234051.jpg)
+![alt text](https://github.com/Deeptimay/alive/blob/main/app/src/main/res/mipmap/screenshot_20201026_234039.jpg)
+![alt text](https://github.com/Deeptimay/alive/blob/main/app/src/main/res/mipmap/screenshot_20201026_234035.jpg)
